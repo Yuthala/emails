@@ -1,0 +1,202 @@
+/* Colors */
+$base-light: #fff;
+$accent: rgb(224, 4, 4);
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Medium.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Light.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	height: 100%;
+	background: url('../images/bckg.jpg') no-repeat center / cover;
+	padding: 40px 5% 60px 5%; 
+}
+
+h1 {
+	font-size: 2.8em;
+	line-height: 1;
+	margin-bottom: 8vh;
+	text-transform: uppercase;
+    color: $base-light;
+    text-align: left;
+}
+h2 {
+	font-size: 1.8em;
+	font-weight: 300;
+    color: $base-light;
+}
+
+h2:not(:last-child) {
+    margin-bottom: 3vh;
+}
+
+.wrapper {
+	position: relative;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .1);
+	border: 2px solid rgba(255, 255, 255, .2);
+	border-radius: 30px;
+	backdrop-filter: blur(20px);
+	transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+    padding: 5% 3vw;
+ }
+
+@keyframes zoom-in {
+	100% {
+		transform: scale(1);
+	}
+}
+
+.animated {
+	transform: translateY(30px);
+	opacity: 0;
+	animation: slide-in  1s ease forwards;
+	animation-delay: 1s;
+}
+
+@keyframes slide-in {
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.home {
+    &-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: 100%;
+        gap: 30px;
+        padding: 50px 5% 0 10px;
+        color: $base-light;
+        animation-delay: 1.2s;
+    }
+
+    &-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        &-item {
+            border: 2px solid $base-light;
+            border-radius: 20px;
+            box-shadow: 0 0 20px $base-light;
+            padding: 20px;
+            transition: all .5s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.social {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+
+    &-btn {
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: $accent;
+        border: 2px solid $base-light;
+        border-radius: 40px;
+        box-shadow: 0 0 10px $base-light;
+        color: $base-light;
+        font-weight: 500;
+        transition: all .5s;
+        &:hover {
+            background: transparent;
+            box-shadow: none;
+            color: $base-light;
+            border-color: $accent;
+        }
+    }
+    &-icons {
+        padding: 20px 0;
+        a {
+            display: inline-flex;
+            padding: 8px;
+            font-size: 36px;
+            color: $base-light;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: all .5s;
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+
+//MEDIA
+@media only screen and (max-width: 991px) {
+    h2 {
+        font-size: 1.4em;
+    }
+}
+@media only screen and (max-width: 767px) {
+	h1 {
+		font-size: 2.2em;
+	}
+    .home-img-item {
+        margin-bottom: 40px;
+		width: 60%;
+    }
+}
