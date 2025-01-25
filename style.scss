@@ -90,8 +90,7 @@ body {
 	font-style: normal;
 	font-weight: 300;
 	height: 100%;
-	background: url('../images/bckg.jpg') no-repeat center / cover;
-	padding: 40px 5% 60px 5%; 
+    background-color: black;
 }
 
 h1 {
@@ -130,6 +129,11 @@ h2:not(:last-child) {
 	}
 }
 
+.top-wrapper {
+    background: url('../images/bckg.jpg') no-repeat center / cover;
+    padding: 40px 5% 60px 5%; 
+}
+
 .animated {
 	transform: translateY(30px);
 	opacity: 0;
@@ -152,6 +156,14 @@ h2:not(:last-child) {
 .nav-link {
 	font-size: 20px;
 	margin-right: 2vw;
+    color: $base-light;
+    border-bottom: 2px solid transparent;
+    &.active {
+        border-bottom: 2px solid $base-light;
+    }
+    &:hover {
+        border-bottom: 2px solid $base-light;
+    }
 }
 
 .home {
