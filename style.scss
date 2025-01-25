@@ -1,6 +1,35 @@
-/* Colors */
+/* SCSS Variables */
 $base-light: #fff;
 $accent: rgb(224, 4, 4);
+$section-padding: 6% 3vw;
+
+/*Mixins*/
+@mixin btn-accent {
+    display: inline-block;
+    background-color: $accent;
+    border: 2px solid $base-light;
+    color: $base-light;
+    font-weight: 500;
+    transition: all .5s;
+    &:hover {
+        background: transparent;
+        box-shadow: none;
+        color: $base-light;
+        border-color: $accent;
+    }
+}
+
+@mixin img-glow {
+    border: 2px solid $base-light;
+    border-radius: 20px;
+    box-shadow: 0 0 20px $base-light;
+    padding: 20px;
+    transition: all .5s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
 
 @font-face {
     font-family: 'Ubuntu';
@@ -92,7 +121,7 @@ h2:not(:last-child) {
 	backdrop-filter: blur(20px);
 	transform: scale(0);
     animation: zoom-in 1s ease forwards;
-    padding: 5% 3vw;
+    padding: $section-padding;
  }
 
 @keyframes zoom-in {
@@ -122,6 +151,7 @@ h2:not(:last-child) {
 
 .nav-link {
 	font-size: 20px;
+	margin-right: 2vw;
 }
 
 .home {
@@ -143,14 +173,7 @@ h2:not(:last-child) {
         align-items: center;
         margin-top: 40px;
         &-item {
-            border: 2px solid $base-light;
-            border-radius: 20px;
-            box-shadow: 0 0 20px $base-light;
-            padding: 20px;
-            transition: all .5s;
-            &:hover {
-                transform: scale(1.2);
-            }
+            @include img-glow;
         }
     }
 }
@@ -161,21 +184,10 @@ h2:not(:last-child) {
 	align-items: center;
 
     &-btn {
-        display: inline-block;
+        @include btn-accent;
         padding: 10px 30px;
-        background-color: $accent;
-        border: 2px solid $base-light;
         border-radius: 40px;
         box-shadow: 0 0 10px $base-light;
-        color: $base-light;
-        font-weight: 500;
-        transition: all .5s;
-        &:hover {
-            background: transparent;
-            box-shadow: none;
-            color: $base-light;
-            border-color: $accent;
-        }
     }
     &-icons {
         padding: 20px 0;
@@ -217,6 +229,20 @@ h2:not(:last-child) {
 			margin-left: 7px;
 		}
 	}
+}
+
+.portfolio {
+	padding: $section-padding;
+	.btn-primary {
+        @include btn-accent;
+		width: 30%;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+    .card {
+        @include img-glow;
+        box-shadow: 0 0 12px $base-light;
+    }
 }
 
 //MEDIA
