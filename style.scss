@@ -477,20 +477,19 @@ h4 {
     color: $base-dark;
     div {
         display: inline-block;
-        min-width: 60px;
-        min-height: 60px;
+        min-width: 50px;
+        min-height: 50px;
         background: $base-light;
         border-radius: 8px;
         border: 2px solid $accent;
         margin: 10px;
         text-align: center;
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: 800;
         span {
             color: $base-dark;
             display: block;
-            margin: 4px 0;
-            font-size: .6em;
+            font-size: .5em;
             font-weight: 400;
             text-align: center;
         }
@@ -526,8 +525,6 @@ h4 {
 		width: 60%;
     }
     #timer {
-        min-width: 50px;
-        min-height: 50px;
         font-size: 1em;
     }
 }
