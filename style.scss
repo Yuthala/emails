@@ -2,7 +2,7 @@
 $base-light: #fff;
 $base-dark: black;
 $accent: rgb(224, 4, 4);
-$section-padding: 0 3vw 5% 3vw;
+$section-padding: 0 3vw 8% 3vw;
     // Animation colors
 $clr-1: #00c2ff;
 $clr-2: #33ff8c;
@@ -287,7 +287,6 @@ h4 {
 }
 
 .offer {
-    padding: $section-padding;
     position: relative;
     overflow: hidden;
     &-item {
@@ -311,6 +310,21 @@ h4 {
         font-size: 2em;
         font-weight: 500;
         text-align: center;
+    }
+    &-btn {
+        @include btn-accent;
+        padding: 10px 50px;
+        border-radius: 40px;
+        box-shadow: 0 0 10px $base-light;
+
+    }
+    &-section {
+        padding: $section-padding;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     // Анимация текста
     .aurora {
@@ -545,7 +559,7 @@ h4 {
         p {
             text-align: left;
             margin-top: 5vh;
-            font-size: 1.6em;
+            font-size: 1.8em;
         }
     }
 }

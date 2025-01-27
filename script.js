@@ -6,9 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	diff = future - now;
 	
 	days = Math.floor(diff / (1000 * 60 * 60 * 24));
-	console.log(`days: ${days}`)
 	hours = Math.floor(diff / (1000 * 60 * 60));
-	console.log(`hours: ${hours}`)
 	mins = Math.floor(diff / (1000 * 60));
 	secs = Math.floor(diff / 1000);
 	
@@ -76,14 +74,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		'<div>' + s + '<span>'+ secsText +'</span></div>'
 	}, 1000)
 
-
-// function correctName(d) {
-// 	if(d % 10 === 1) {
-// 		daysText = 'день'
-// 	} else if(d % 10 === 2 || d % 10 === 3 || d % 10 === 4) {
-// 		daysText = 'дня'
-// 	} else {
-// 		daysText === 'дней'
-// 	}
-// }
+	window.addEventListener('scroll', function () {
+		const scrollPosition = window.scrollY;
+		console.log(scrollPosition);
+	  });
 })
