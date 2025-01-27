@@ -1,5 +1,6 @@
 /* SCSS Variables */
 $base-light: #fff;
+$base-dark: black;
 $accent: rgb(224, 4, 4);
 $section-padding: 0 3vw 5% 3vw;
     // Animation colors
@@ -93,7 +94,7 @@ body {
 	font-style: normal;
 	font-weight: 300;
 	height: 100%;
-    background-color: black;
+    background-color: $base-dark;
     color: $base-light;
 }
 
@@ -122,7 +123,7 @@ h3 {
 }
 
 h4 {
-    font-size: 2.4em;
+    font-size: 1.4em;
     text-transform: uppercase;
     text-align: center;
 }
@@ -306,6 +307,11 @@ h4 {
             margin: 0;
         }
     }
+    p {
+        font-size: 2em;
+        font-weight: 500;
+        text-align: center;
+    }
     // Анимация текста
     .aurora {
         position: absolute;
@@ -467,6 +473,30 @@ h4 {
   }
 /*End of text animation*/
 
+#timer {
+    color: $base-dark;
+    div {
+        display: inline-block;
+        min-width: 60px;
+        min-height: 60px;
+        background: $base-light;
+        border-radius: 8px;
+        border: 2px solid $accent;
+        margin: 10px;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: 800;
+        span {
+            color: $base-dark;
+            display: block;
+            margin: 4px 0;
+            font-size: .6em;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}
+
 //MEDIA
 @media only screen and (max-width: 991px) {
     h2 {
@@ -475,11 +505,16 @@ h4 {
 	.nav-link {
 		font-size: 18px;
 	}
-    .offer-item {
-        justify-content: start;
-        &:nth-child(2) {
-			order: 3;
-		}
+    .offer {
+        &-item {
+            &:nth-child(2) {
+                order: 3;
+            }
+        }
+        p {
+            text-align: left;
+            margin-top: 5vh;
+        }
     }
 }
 @media only screen and (max-width: 767px) {
@@ -489,6 +524,11 @@ h4 {
     .home-img-item {
         margin-bottom: 40px;
 		width: 60%;
+    }
+    #timer {
+        min-width: 50px;
+        min-height: 50px;
+        font-size: 1em;
     }
 }
 
@@ -505,5 +545,10 @@ h4 {
         &:nth-child(3) {
 			order: 3;
 		}
+        p {
+            text-align: left;
+            margin-top: 5vh;
+            font-size: 1.6em;
+        }
     }
 }
