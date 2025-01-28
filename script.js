@@ -11,58 +11,82 @@ window.addEventListener('DOMContentLoaded', function() {
 	secs = Math.floor(diff / 1000);
 	
 	d = days;
-	let daysText;
-	if(days === 11 || days === 12) {
-		daysText = 'дней'
-	} else {
-		if(days % 10 === 1) {
-			daysText = 'день'
-		} else if(days % 10 === 2 || days % 10 === 3 || days % 10 === 4) {
-			daysText = 'дня'
-		} else {
-			daysText = 'дней'
-		}
-	}
-
 	h = hours - days * 24;
-	let hoursText;
-	if(h === 11 || h === 12) {
-		hoursText = 'часов'
-	} else {
-		if(h % 10 === 1) {
-			hoursText = 'час'
-		} else if(h % 10 === 2 || h % 10 === 3 || h % 10 === 4) {
-			hoursText = 'часа'
-		} else {
-			hoursText = 'часов'
-		}
-	}
-
 	m = mins - hours * 60;
-	let minsText;
-	if(m === 11 || m === 12) {
-		minsText = 'минут'
-	} else {
-		if(m % 10 === 1) {
-			minsText = 'минута'
-		} else if(m % 10 === 2 || m % 10 === 3 || m % 10 === 4) {
-			minsText = 'минуты'
-		} else {
-			minsText = 'минут'
-		}
+	s = secs - mins * 60;
+
+	let daysText,
+		hoursText,
+		minsText,
+		secsText
+
+	forms = {
+		0: ['дней', 'часов', 'минут', 'секунд'],
+		1: ['день', 'час', 'минута', 'секунда'],
+		2: ['дня', 'часа', 'минуты', 'секунды'],
+		3: ['дня', 'часа', 'минуты', 'секунды'],
+		4: ['дня', 'часа', 'минуты', 'секунды'],
+		5: ['дней', 'часов', 'минут', 'секунд'],
+		6: ['дней', 'часов', 'минут', 'секунд'],
+		7: ['дней', 'часов', 'минут', 'секунд'],
+		8: ['дней', 'часов', 'минут', 'секунд'],
+		9: ['дней', 'часов', 'минут', 'секунд'],
+		11: ['дней', 'часов', 'минут', 'секунд'],
+		12: ['дней', 'часов', 'минут', 'секунд'],
+		13: ['дней', 'часов', 'минут', 'секунд'],
+		14: ['дней', 'часов', 'минут', 'секунд']
 	}
 
-	s = secs - mins * 60;
-	let secsText;
-	if(s === 11 || s === 12) {
-		secsText = 'секунд'
-	} else {
-		if(s % 10 === 1) {
-			secsText = 'секунда'
-		} else if(s % 10 === 2 || s % 10 === 3 || s % 10 === 4) {
-			secsText = 'секунды'
+	const time = [d, h, m, s]
+	const timeTransformed = time.map((item) => {
+		if(item != 11 && item != 12 && item != 13 && item != 14) {
+			return item % 10;
 		} else {
-			secsText = 'секунд'
+			return item;
+		}
+	})
+
+	for(let i = 0; i < 4; i++) {
+		switch(i) {
+			case 0:
+				if (timeTransformed[i] >= 5 && timeTransformed[i] <= 14 || timeTransformed[i] == 0) {
+					daysText = forms[5][i]
+				} else if (timeTransformed[i] == 1) {
+					daysText = forms[timeTransformed[i]][i]
+				} else {
+					daysText = forms[timeTransformed[i]][i]
+				}
+				break;
+
+			case 1:
+				if (timeTransformed[i] >= 5 && timeTransformed[i] <= 14 || timeTransformed[i] == 0) {
+					hoursText = forms[5][i]
+				} else if (timeTransformed[i] == 1) {
+					hoursText = forms[timeTransformed[i]][i]
+				} else {
+					hoursText = forms[timeTransformed[i]][i]
+				}
+				break;
+			
+			case 2:
+				if (timeTransformed[i] >= 5 && timeTransformed[i] <= 14 || timeTransformed[i] == 0) {
+					minsText = forms[5][i]
+				} else if (timeTransformed[i] == 1) {
+					minsText = forms[timeTransformed[i]][i]
+				} else {
+					minsText = forms[timeTransformed[i]][i]
+				}
+				break;
+
+			case 3:
+				if (timeTransformed[i] >= 5 && timeTransformed[i] <= 14 || timeTransformed[i] == 0) {
+					secsText = forms[5][i]
+				} else if (timeTransformed[i] == 1) {
+					secsText = forms[timeTransformed[i]][i]
+				} else {
+					secsText = forms[timeTransformed[i]][i]
+				}
+				break;
 		}
 	}
 	
@@ -76,6 +100,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	window.addEventListener('scroll', function () {
 		const scrollPosition = window.scrollY;
-		console.log(scrollPosition);
+		// console.log(scrollPosition);
 	  });
 })
