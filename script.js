@@ -1,24 +1,30 @@
 window.addEventListener('DOMContentLoaded', function() {
 
+	//функция обратного отсчета времени
 	const updateTimer = setInterval(function() {
-	future = Date.parse("Mar 31, 2025 23:59:59");
+	future = Date.parse("Jan 30, 2025 13:46:40");
 	now = new Date();
 	diff = future - now;
-	
+
 	days = Math.floor(diff / (1000 * 60 * 60 * 24));
 	hours = Math.floor(diff / (1000 * 60 * 60));
 	mins = Math.floor(diff / (1000 * 60));
 	secs = Math.floor(diff / 1000);
-	
-	d = days;
-	h = hours - days * 24;
-	m = mins - hours * 60;
-	s = secs - mins * 60;
+	if(days >= 0) {
+		//вычисляем сколько дней/часов/минут/секунд осталось в таймере
+		d = days;
+		h = hours - days * 24;
+		m = mins - hours * 60;
+		s = secs - mins * 60;
+	//останавливаем счетчик, когда время обратного отсчета заканчивается	
+	} else if(days < 0) {
+		clearInterval(updateTimer);
+	}
 
 	let daysText,
-		hoursText,
-		minsText,
-		secsText
+	hoursText,
+	minsText,
+	secsText
 
 	forms = {
 		0: ['дней', 'часов', 'минут', 'секунд'],
@@ -37,8 +43,10 @@ window.addEventListener('DOMContentLoaded', function() {
 		14: ['дней', 'часов', 'минут', 'секунд']
 	}
 
+
 	const time = [d, h, m, s]
-	const timeTransformed = time.map((item) => {
+	//"обрезаем" первую цифру полученного числа кроме 11, 12, 13, 14
+ 	const timeTransformed = time.map((item) => {
 		if(item != 11 && item != 12 && item != 13 && item != 14) {
 			return item % 10;
 		} else {
@@ -46,6 +54,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 	})
 
+	//проходим полученный массив (i - индексы массива); 
+	// соответствующую форму времени подставляем из объекта forms
 	for(let i = 0; i < 4; i++) {
 		switch(i) {
 			case 0:
@@ -90,6 +100,17 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 	
+	// function helper(textField, i) {
+	// 	if (timeTransformed[i] >= 5 && timeTransformed[i] <= 14 || timeTransformed[i] == 0) {
+	// 		textField = forms[5][i]
+	// 	} else if (timeTransformed[i] == 1) {
+	// 		textField = forms[timeTransformed[i]][i]
+	// 	} else {
+	// 		textField = forms[timeTransformed[i]][i]
+	// 	}
+	// }
+
+	//отрисовываем в div id="timer"
 	document.getElementById("timer")
 	  .innerHTML =
 		'<div>' + d + '<span>' + daysText + '</span></div>' +
@@ -98,8 +119,11 @@ window.addEventListener('DOMContentLoaded', function() {
 		'<div>' + s + '<span>'+ secsText +'</span></div>'
 	}, 1000)
 
-	window.addEventListener('scroll', function () {
-		const scrollPosition = window.scrollY;
-		// console.log(scrollPosition);
-	  });
+
+
+	// Функция определения Y-скролла
+	// window.addEventListener('scroll', function () {
+	// 	const scrollPosition = window.scrollY;
+	// 	// console.log(scrollPosition);
+	//   });
 })
