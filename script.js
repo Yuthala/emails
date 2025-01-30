@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	//функция обратного отсчета времени
 	const updateTimer = setInterval(function() {
-	future = Date.parse("Jan 30, 2025 13:46:40");
+	future = Date.parse("Mar 31, 2025 23:59:59");
 	now = new Date();
 	diff = future - now;
 

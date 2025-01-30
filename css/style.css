@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SCSS Variables */
 /*Mixins*/
 @font-face {
@@ -91,6 +92,19 @@ caption {
   color: #fff;
 }
 
+tfoot th, tfoot td {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-child(2), tr > th:nth-child(3), tr > th:nth-child(4), tfoot tr > td {
+  text-align: center;
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem 1rem;
+}
+
 .wrapper {
   position: relative;
   height: 100%;
@@ -150,6 +164,7 @@ caption {
     opacity: 1;
   }
 }
+/*Меню*/
 .navbar-brand {
   font-size: 24px;
   font-weight: 600;
@@ -168,6 +183,7 @@ caption {
   border-bottom: 2px solid #fff;
 }
 
+/*Первый экран*/
 .home-detail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,42 +282,7 @@ caption {
   color: rgb(224, 4, 4);
 }
 
-.footer-nav {
-  font-size: 12px;
-  padding-top: 60px;
-}
-
-.footer-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.footer-item:nth-child(2) {
-  font-size: 18px;
-}
-.footer-item:nth-child(2) p {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.footer-item:nth-child(2) i {
-  font-size: 32px;
-  color: rgb(6, 230, 246);
-  margin-left: 7px;
-}
-
+/*Секция Примеры работ(Potrfolio)*/
 .portfolio {
   padding: 0 3vw 8% 3vw;
 }
@@ -348,6 +329,7 @@ caption {
   padding-bottom: 4vh;
 }
 
+/*Секция Акции(Offer)*/
 .offer {
   position: relative;
   overflow: hidden;
@@ -673,6 +655,75 @@ caption {
   text-align: center;
 }
 
+/*Секция Прайс Лист*/
+.strike-text {
+  position: relative;
+  color: lightgray;
+}
+.strike-text:before {
+  position: absolute;
+  top: 4px;
+  width: 100%;
+  height: 50%;
+  content: "";
+  border-bottom: 4px solid #f00;
+  -webkit-transform: rotateZ(-30deg);
+          transform: rotateZ(-30deg);
+}
+
+.discount-price {
+  position: relative;
+}
+
+.ri-discount-percent-fill {
+  position: absolute;
+  font-size: 1.7em;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.table-primary {
+  --bs-table-bg: rgb(123, 3, 123);
+  --bs-table-color: #fff;
+}
+
+/*Футер*/
+.footer-nav {
+  font-size: 12px;
+  padding-top: 60px;
+}
+
+.footer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-item:nth-child(2) {
+  font-size: 18px;
+}
+.footer-item:nth-child(2) p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-item:nth-child(2) i {
+  font-size: 32px;
+  color: rgb(6, 230, 246);
+  margin-left: 7px;
+}
+
 @media only screen and (max-width: 991px) {
   h2 {
     font-size: 1.4em;
@@ -689,6 +740,14 @@ caption {
     text-align: left;
     margin-top: 5vh;
   }
+  .ri-discount-percent-fill {
+    -webkit-transform: translateY(-40px) translateX(-30px);
+            transform: translateY(-40px) translateX(-30px);
+    font-size: 1.4em;
+  }
+  tfoot th, tfoot td {
+    font-size: 1.2em;
+  }
 }
 @media only screen and (max-width: 767px) {
   h1 {
@@ -700,6 +759,13 @@ caption {
   }
   #timer {
     font-size: 1em;
+  }
+  tfoot th, tfoot td {
+    font-size: 1em;
+  }
+  .ri-discount-percent-fill {
+    -webkit-transform: translateY(-10px) translateX(0);
+            transform: translateY(-10px) translateX(0);
   }
 }
 @media only screen and (max-width: 575px) {
@@ -725,5 +791,8 @@ caption {
     text-align: left;
     margin-top: 5vh;
     font-size: 1.8em;
+  }
+  .ri-discount-percent-fill {
+    display: none;
   }
 }
