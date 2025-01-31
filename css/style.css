@@ -105,6 +105,14 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   padding: 1rem 1rem;
 }
 
+.table > thead > tr > th:first-child {
+  width: 40%;
+}
+
+.table > thead > tr > th:not(:first-child) {
+  width: 20%;
+}
+
 .wrapper {
   position: relative;
   height: 100%;
@@ -377,6 +385,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   padding: 10px 50px;
+  margin-top: 8vh;
   border-radius: 40px;
   -webkit-box-shadow: 0 0 10px #fff;
           box-shadow: 0 0 10px #fff;
@@ -671,17 +680,6 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
           transform: rotateZ(-30deg);
 }
 
-.discount-price {
-  position: relative;
-}
-
-.ri-discount-percent-fill {
-  position: absolute;
-  font-size: 1.7em;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-}
-
 .table-primary {
   --bs-table-bg: rgb(123, 3, 123);
   --bs-table-color: #fff;
@@ -740,13 +738,11 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
     text-align: left;
     margin-top: 5vh;
   }
-  .ri-discount-percent-fill {
-    -webkit-transform: translateY(-40px) translateX(-30px);
-            transform: translateY(-40px) translateX(-30px);
-    font-size: 1.4em;
-  }
   tfoot th, tfoot td {
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+  .table > :not(caption) > * > * {
+    padding: 1rem 0.5rem;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -762,10 +758,6 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   }
   tfoot th, tfoot td {
     font-size: 1em;
-  }
-  .ri-discount-percent-fill {
-    -webkit-transform: translateY(-10px) translateX(0);
-            transform: translateY(-10px) translateX(0);
   }
 }
 @media only screen and (max-width: 575px) {
@@ -791,8 +783,5 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
     text-align: left;
     margin-top: 5vh;
     font-size: 1.8em;
-  }
-  .ri-discount-percent-fill {
-    display: none;
   }
 }
