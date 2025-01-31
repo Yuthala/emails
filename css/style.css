@@ -101,6 +101,10 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   text-align: center;
 }
 
+.table {
+  margin-bottom: 10vh;
+}
+
 .table > :not(caption) > * > * {
   padding: 1rem 1rem;
 }
@@ -683,6 +687,10 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 .table-primary {
   --bs-table-bg: rgb(123, 3, 123);
   --bs-table-color: #fff;
+}
+
+table.add-services tbody th {
+  font-weight: 300;
 }
 
 /*Футер*/
