@@ -522,29 +522,35 @@ text-align: center;
     }
 }
 
-    /*Секция Прайс Лист*/
-    .strike-text {
-        position: relative;
-        color: lightgray;
-        &:before {
-            position: absolute;
-            top: 4px;
-            width: 100%;
-            height: 50%;
-            content: '';
-            border-bottom: 4px solid #f00;
-            transform: rotateZ(-30deg);
-         }
+/*Секция Прайс Лист*/
+.strike-text {
+position: relative;
+color: lightgray;
+font-size: .8em;
+&:before {
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 50%;
+    content: '';
+    border-bottom: 4px solid #f00;
+    transform: rotateZ(-30deg);
     }
+}
 
-    .table-primary {
-        --bs-table-bg: rgb(123, 3, 123);
-        --bs-table-color: #fff;
-    }
+.table-primary {
+--bs-table-bg: rgb(123, 3, 123);
+--bs-table-color: #ffffff;
+}
 
-    table.add-services  tbody th {
-        font-weight: 300;
-    }
+table.add-services  tbody th {
+font-weight: 300;
+}
+
+.ri-check-line {
+    color: rgb(45, 199, 45);
+    font-size: 24px;
+}
 
 /*Футер*/
 .footer-nav {

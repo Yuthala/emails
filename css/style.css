@@ -672,6 +672,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 .strike-text {
   position: relative;
   color: lightgray;
+  font-size: 0.8em;
 }
 .strike-text:before {
   position: absolute;
@@ -686,11 +687,16 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 
 .table-primary {
   --bs-table-bg: rgb(123, 3, 123);
-  --bs-table-color: #fff;
+  --bs-table-color: #ffffff;
 }
 
 table.add-services tbody th {
   font-weight: 300;
+}
+
+.ri-check-line {
+  color: rgb(45, 199, 45);
+  font-size: 24px;
 }
 
 /*Футер*/
