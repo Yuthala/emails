@@ -92,6 +92,11 @@ caption {
   color: #fff;
 }
 
+.red {
+  color: rgb(224, 4, 4);
+  font-weight: 800;
+}
+
 tfoot th, tfoot td {
   font-size: 1.4em;
   font-weight: 600;
@@ -340,6 +345,23 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   padding-top: 3vh;
   padding-bottom: 4vh;
 }
+.portfolio .card-body p {
+  min-height: 12vh;
+  max-height: 12vh;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio .card-body p:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(37, 37, 41)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, rgb(37, 37, 41) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
 
 /*Секция Акции(Offer)*/
 .offer {
@@ -388,11 +410,12 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   font-weight: 500;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  padding: 10px 50px;
+  padding: 20px 70px;
   margin-top: 8vh;
   border-radius: 40px;
   -webkit-box-shadow: 0 0 10px #fff;
           box-shadow: 0 0 10px #fff;
+  font-size: 20px;
 }
 .offer-btn:hover {
   background: transparent;
@@ -699,6 +722,36 @@ table.add-services tbody th {
   font-size: 24px;
 }
 
+/* секция Контакты */
+.contacts.contacts-icons {
+  padding: 20px 0;
+  padding: 0;
+}
+.contacts.contacts-icons a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 8px;
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contacts.contacts-icons a:hover {
+  color: rgb(224, 4, 4);
+}
+.contacts-wrap {
+  border: 1px solid rgb(224, 4, 4);
+  border-radius: 30px;
+  margin: 0 auto;
+}
+
+.contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
+  font-size: 100px;
+}
+
 /*Футер*/
 .footer-nav {
   font-size: 12px;
@@ -772,6 +825,9 @@ table.add-services tbody th {
   }
   tfoot th, tfoot td {
     font-size: 1em;
+  }
+  .contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
+    font-size: 70px;
   }
 }
 @media only screen and (max-width: 575px) {

@@ -34,6 +34,22 @@ $clr-4: #e54cff;
     transition: all .5s;
 }
 
+@mixin social-icons {
+    padding: 20px 0;
+    a {
+        display: inline-flex;
+        padding: 8px;
+        font-size: 36px;
+        color: $base-light;
+        text-decoration: none;
+        margin: 0 8px;
+        transition: all .5s;
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
 // Fonts
 @font-face {
     font-family: 'Ubuntu';
@@ -131,6 +147,11 @@ h4 {
 
 caption {
     color: $base-light;
+}
+
+.red {
+    color: $accent;
+    font-weight: 800;
 }
 
 tfoot th, tfoot td{
@@ -254,19 +275,7 @@ text-align: center;
         box-shadow: 0 0 10px $base-light;
     }
     &-icons {
-        padding: 20px 0;
-        a {
-            display: inline-flex;
-            padding: 8px;
-            font-size: 36px;
-            color: $base-light;
-            text-decoration: none;
-            margin: 0 8px;
-            transition: all .5s;
-            &:hover {
-                color: $accent;
-            }
-        }
+        @include social-icons;
     }
 }
 
@@ -292,6 +301,23 @@ text-align: center;
         &-footer {
             padding-top: 3vh;
             padding-bottom: 4vh;
+        }
+        &-body p {
+            min-height: 12vh;
+            max-height: 12vh;
+            overflow: hidden;
+            position: relative;
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                background: -webkit-gradient(linear, left bottom, left top, from(rgb(37, 37, 41)), to(rgba(255, 255, 255, 0)));
+                background: linear-gradient(0deg,rgb(37, 37, 41)0%,rgba(255, 255, 255, 0)100%);
+                z-index: 2;
+            }
         }
     }
 }
@@ -324,11 +350,11 @@ text-align: center;
     }
     &-btn {
         @include btn-accent;
-        padding: 10px 50px;
+        padding: 20px 70px;
         margin-top: 8vh;
         border-radius: 40px;
         box-shadow: 0 0 10px $base-light;
-
+        font-size: 20px;
     }
     &-section {
         padding: $section-padding;
@@ -552,6 +578,24 @@ font-weight: 300;
     font-size: 24px;
 }
 
+/* секция Контакты */
+.contacts {
+    &.contacts-icons {
+        @include social-icons;
+        padding: 0
+    }
+    &-wrap {
+        border: 1px solid $accent;
+        border-radius: 30px;
+        margin: 0 auto;
+    }
+}
+
+.contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
+    font-size: 100px;
+}
+
+
 /*Футер*/
 .footer-nav {
 font-size: 12px;
@@ -576,7 +620,6 @@ padding-top: 60px;
         }
     }
 }
-
 
 //MEDIA
 @media only screen and (max-width: 991px) {
@@ -617,6 +660,9 @@ padding-top: 60px;
     }
     tfoot th, tfoot td{
         font-size: 1em;
+    }
+    .contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
+        font-size: 70px;
     }
 }
 
