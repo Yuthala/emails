@@ -282,8 +282,6 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .social-icons {
   padding: 20px 0;
-  padding: 8px;
-  margin: 0 8px;
 }
 .social-icons a {
   display: -webkit-inline-box;
@@ -297,6 +295,10 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .social-icons a:hover {
   color: rgb(224, 4, 4);
+}
+.social-icons a {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /*Секция Примеры работ(Potrfolio)*/
