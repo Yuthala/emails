@@ -38,11 +38,9 @@ $clr-4: #e54cff;
     padding: 20px 0;
     a {
         display: inline-flex;
-        padding: 8px;
         font-size: 36px;
         color: $base-light;
         text-decoration: none;
-        margin: 0 8px;
         transition: all .5s;
         &:hover {
             color: $accent;
@@ -276,6 +274,8 @@ text-align: center;
     }
     &-icons {
         @include social-icons;
+        padding: 8px;
+        margin: 0 8px;
     }
 }
 
@@ -566,7 +566,7 @@ font-size: .8em;
 
 .table-primary {
 --bs-table-bg: rgb(123, 3, 123);
---bs-table-color: #ffffff;
+--bs-table-color: $base-light;
 }
 
 table.add-services  tbody th {
@@ -579,16 +579,42 @@ font-weight: 300;
 }
 
 /* секция Контакты */
+.bottom-wrapper {
+    background: url('../images/bckg-bottom.jpg') no-repeat center / cover;
+    padding: 0 5%; 
+}
+
 .contacts {
-    &.contacts-icons {
+    &-icons {
         @include social-icons;
-        padding: 0
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+        &-item {
+            padding: 7px 30px 7px 30px;
+            border: 2px solid $base-light;
+            border-radius: 30px;
+            &:hover {
+                background: transparent;
+                box-shadow: none;
+                border-color: $accent;
+                .ri-telegram-2-line:before, .ri-vk-fill:before {
+                    color: $base-light;
+                }
+            }
+        }
     }
-    &-wrap {
-        border: 1px solid $accent;
-        border-radius: 30px;
-        margin: 0 auto;
+    h3 {
+        margin-top: 0;
+        margin-bottom: 100px;
     }
+}
+
+.contacts .container-fluid {
+    padding: 0;
 }
 
 .contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
@@ -684,5 +710,9 @@ padding-top: 60px;
             margin-top: 5vh;
             font-size: 1.8em;
         }
+    }
+    .contacts h3 {
+        margin-top: 30px;
+        margin-bottom: 70px;
     }
 }

@@ -282,16 +282,16 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .social-icons {
   padding: 20px 0;
+  padding: 8px;
+  margin: 0 8px;
 }
 .social-icons a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 8px;
   font-size: 36px;
   color: #fff;
   text-decoration: none;
-  margin: 0 8px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -710,7 +710,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 
 .table-primary {
   --bs-table-bg: rgb(123, 3, 123);
-  --bs-table-color: #ffffff;
+  --bs-table-color: $base-light;
 }
 
 table.add-services tbody th {
@@ -723,29 +723,60 @@ table.add-services tbody th {
 }
 
 /* секция Контакты */
-.contacts.contacts-icons {
-  padding: 20px 0;
-  padding: 0;
+.bottom-wrapper {
+  background: url("../images/bckg-bottom.jpg") no-repeat center/cover;
+  padding: 0 5%;
 }
-.contacts.contacts-icons a {
+
+.contacts-icons {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10vw;
+}
+.contacts-icons a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 8px;
   font-size: 36px;
   color: #fff;
   text-decoration: none;
-  margin: 0 8px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-.contacts.contacts-icons a:hover {
+.contacts-icons a:hover {
   color: rgb(224, 4, 4);
 }
-.contacts-wrap {
-  border: 1px solid rgb(224, 4, 4);
+.contacts-icons-item {
+  padding: 7px 30px 7px 30px;
+  border: 2px solid #fff;
   border-radius: 30px;
-  margin: 0 auto;
+}
+.contacts-icons-item:hover {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: rgb(224, 4, 4);
+}
+.contacts-icons-item:hover .ri-telegram-2-line:before, .contacts-icons-item:hover .ri-vk-fill:before {
+  color: #fff;
+}
+.contacts h3 {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+.contacts .container-fluid {
+  padding: 0;
 }
 
 .contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
@@ -853,5 +884,9 @@ table.add-services tbody th {
     text-align: left;
     margin-top: 5vh;
     font-size: 1.8em;
+  }
+  .contacts h3 {
+    margin-top: 30px;
+    margin-bottom: 70px;
   }
 }
