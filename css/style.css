@@ -107,7 +107,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 
 .table {
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
 }
 
 .table > :not(caption) > * > * {
@@ -219,9 +219,6 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
           animation-delay: 1.2s;
 }
 .home-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -232,7 +229,10 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 40px;
+  padding-top: 40px;
+}
+.home-img img {
+  border-radius: 19px;
 }
 .home-img-item {
   border: 2px solid #fff;
@@ -242,6 +242,9 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   padding: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .home-img-item:hover {
   -webkit-transform: scale(1.2);
@@ -301,7 +304,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   margin-right: 20px;
 }
 
-/*Секция Примеры работ(Potrfolio)*/
+/*Секция Кейсы(Potrfolio)*/
 .portfolio {
   padding: 0 3vw 8% 3vw;
 }
@@ -724,6 +727,27 @@ table.add-services tbody th {
   font-size: 24px;
 }
 
+.tech-req {
+  margin-bottom: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tech-req .social-btn {
+  border-radius: 4px 0 0 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  border-right: 1px solid lightgrey;
+}
+.tech-req .social-btn-right {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 2px solid #fff;
+}
+
 /* секция Контакты */
 .bottom-wrapper {
   background: url("../images/bckg-bottom.jpg") no-repeat center/cover;
@@ -851,7 +875,7 @@ table.add-services tbody th {
   }
   .home-img-item {
     margin-bottom: 40px;
-    width: 60%;
+    width: 80%;
   }
   #timer {
     font-size: 1em;

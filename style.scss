@@ -162,7 +162,7 @@ text-align: center;
 }
 
 .table {
-    margin-bottom: 10vh;
+    margin-bottom:3vh;
 }
 
 .table>:not(caption)>*>* {
@@ -247,13 +247,17 @@ text-align: center;
         animation-delay: 1.2s;
     }
     &-img {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 40px;
+        padding-top: 40px;
+        img {
+            border-radius: 19px;
+        }
         &-item {
             @include img-glow;
+            padding: 0;
+            box-shadow: none;
             &:hover {
                 transform: scale(1.2);
             }
@@ -280,7 +284,7 @@ text-align: center;
     }
 }
 
-/*Секция Примеры работ(Potrfolio)*/
+/*Секция Кейсы(Potrfolio)*/
 .portfolio {
 	padding: $section-padding;
 	.btn-primary {
@@ -579,6 +583,25 @@ font-weight: 300;
     font-size: 24px;
 }
 
+.tech-req {
+    margin-bottom: 10vh;
+    display: flex;
+    .social-btn {
+        border-radius: 4px 0 0 4px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0;
+        border-right:1px solid lightgrey;
+        &-right {
+            border-radius: 0 4px 4px 0;
+            border-left: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-right: 2px solid $base-light;
+        }
+    }
+}
+
 /* секция Контакты */
 .bottom-wrapper {
     background: url('../images/bckg-bottom.jpg') no-repeat center / cover;
@@ -680,7 +703,7 @@ padding-top: 60px;
 	}
     .home-img-item {
         margin-bottom: 40px;
-		width: 60%;
+		width: 80%;
     }
     #timer {
         font-size: 1em;
