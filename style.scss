@@ -123,11 +123,6 @@ h1 {
 h2 {
 	font-size: 1.8em;
 	font-weight: 300;
-
-}
-
-h2:not(:last-child) {
-    margin-bottom: 3vh;
 }
 
 h3 {
@@ -247,28 +242,62 @@ text-align: center;
         animation-delay: 1.2s;
     }
     &-img {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 40px;
+        padding-left: 30px;
         img {
-            border-radius: 19px;
+            border-radius: 18px;
         }
         &-item {
             @include img-glow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 0;
+            margin-top: 8vh;
             box-shadow: none;
+            padding: 20px;
             &:hover {
                 transform: scale(1.2);
             }
         }
+    }
+    &-logo {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 0;
+        img {
+            border-radius: 8px;
+            padding: 10px;
+            margin: 2px;
+            width: 5vw;
+            object-fit: contain;
+        }
+        &-item {
+            background-color: $base-light;
+            z-index: 2;
+        }
+    }
+}
+
+.home {
+    ul {
+    list-style-type: none;
+    }
+    &-detail li {
+        font-size: 1.8em;
+        font-weight: 300;
+        margin-bottom: 3vh;
     }
 }
 
 .social {
 	display: flex;
     flex-direction: column;
-	align-items: center;
+	align-items: start;
+    padding-top: 6vh;
     &-btn {
         @include btn-accent;
         padding: 10px 30px;
@@ -278,8 +307,8 @@ text-align: center;
     &-icons {
         @include social-icons;
         a {
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 16px;
+            margin-right: 16px;
         }
     }
 }
@@ -705,6 +734,9 @@ padding-top: 60px;
         margin-bottom: 40px;
 		width: 80%;
     }
+    .home-logo img {
+        width: 8vw;
+    }
     #timer {
         font-size: 1em;
     }
@@ -717,7 +749,10 @@ padding-top: 60px;
 }
 
 @media only screen and (max-width: 575px) {
-	.footer-item {
+    .home-logo img {
+        width: 12vw;
+    }
+    .footer-item {
 		&:nth-child(2) {
 			order: 3;
 			align-self: center;
