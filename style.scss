@@ -583,6 +583,10 @@ text-align: center;
 }
 
 /*Секция Прайс Лист*/
+.price {
+    margin-bottom: -3vh;
+}
+
 .strike-text {
 position: relative;
 color: lightgray;
@@ -634,7 +638,14 @@ font-weight: 300;
 /* секция Контакты */
 .bottom-wrapper {
     background: url('../images/bckg-bottom.jpg') no-repeat center / cover;
-    padding: 0 5%; 
+    backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+}
+
+.blur {
+    backdrop-filter: blur(8px); 
+    height: 100vh;
+    width: 100%;
 }
 
 .contacts {
@@ -662,7 +673,7 @@ font-weight: 300;
     }
     h3 {
         margin-top: 0;
-        margin-bottom: 100px;
+        padding-top: 8vh;
     }
 }
 
@@ -671,7 +682,7 @@ font-weight: 300;
 }
 
 .contacts .ri-telegram-2-line, .contacts .ri-vk-fill {
-    font-size: 100px;
+    font-size: 70px;
 }
 
 
