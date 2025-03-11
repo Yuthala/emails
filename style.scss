@@ -285,6 +285,7 @@ text-align: center;
 .home {
     ul {
     list-style-type: none;
+    padding-left: 0;
     }
     &-detail li {
         font-size: 1.8em;
@@ -644,7 +645,7 @@ font-weight: 300;
 
 .blur {
     backdrop-filter: blur(8px); 
-    height: 100vh;
+    height: 50vh;
     width: 100%;
 }
 
@@ -658,7 +659,7 @@ font-weight: 300;
         align-items: center;
         gap: 10vw;
         &-item {
-            padding: 7px 30px 7px 30px;
+            padding: 7px 23px 7px 23px;
             border: 2px solid $base-light;
             border-radius: 30px;
             &:hover {
@@ -763,13 +764,9 @@ padding-top: 60px;
     .home-logo img {
         width: 12vw;
     }
-    .footer-item {
-		&:nth-child(2) {
-			order: 3;
-			align-self: center;
-			margin-top: 5vh;
-		}
-	}
+    .home-detail li {
+        font-size: 1.4em;
+    }
     .offer-item  {
         justify-content: center;
         &:nth-child(3) {
@@ -785,4 +782,11 @@ padding-top: 60px;
         margin-top: 30px;
         margin-bottom: 70px;
     }
+    .footer-item {
+		&:nth-child(2) {
+			order: 3;
+			align-self: center;
+			margin-top: 5vh;
+		}
+	}
 }
