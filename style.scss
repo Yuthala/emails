@@ -354,8 +354,17 @@ text-align: center;
                 z-index: 2;
             }
         }
+        &-text {
+            font-size: 14px;
+        }
+        &-footer a {
+            color: $base-light;
+            font-size: 12px;
+            text-decoration: underline;
+        }
     }
 }
+
 
 /*Секция Акции(Offer)*/
 .offer {

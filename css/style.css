@@ -409,6 +409,14 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   background: linear-gradient(0deg, rgb(37, 37, 41) 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
 }
+.portfolio .card-text {
+  font-size: 14px;
+}
+.portfolio .card-footer a {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: underline;
+}
 
 /*Секция Акции(Offer)*/
 .offer {
