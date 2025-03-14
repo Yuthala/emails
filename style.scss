@@ -339,7 +339,7 @@ text-align: center;
         }
         &-body p {
             min-height: 12vh;
-            max-height: 12vh;
+            max-height: 20vh;
             overflow: hidden;
             position: relative;
             &:after {
@@ -361,6 +361,17 @@ text-align: center;
             color: $base-light;
             font-size: 12px;
             text-decoration: underline;
+        }
+    }
+    .solution {
+        display: flex;
+        align-items: center;
+        padding: 0 5px 0 5px;
+        ul {
+            width: 50%;
+            li {
+                height: 15vh;
+            }
         }
     }
 }

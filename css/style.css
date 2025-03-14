@@ -394,7 +394,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .portfolio .card-body p {
   min-height: 12vh;
-  max-height: 12vh;
+  max-height: 20vh;
   overflow: hidden;
   position: relative;
 }
@@ -416,6 +416,21 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   color: #fff;
   font-size: 12px;
   text-decoration: underline;
+}
+.portfolio .solution {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px 0 5px;
+}
+.portfolio .solution ul {
+  width: 50%;
+}
+.portfolio .solution ul li {
+  height: 15vh;
 }
 
 /*Секция Акции(Offer)*/
