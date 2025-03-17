@@ -89,7 +89,7 @@ caption {
 }
 
 .red {
-  color: rgb(224, 4, 4);
+  color: #e00404;
   font-weight: 800;
 }
 
@@ -307,7 +307,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .social-btn {
   display: inline-block;
-  background-color: rgb(224, 4, 4);
+  background-color: #e00404;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 500;
@@ -323,7 +323,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fff;
-  border-color: rgb(224, 4, 4);
+  border-color: #e00404;
 }
 .social-icons {
   padding: 20px 0;
@@ -339,7 +339,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   transition: all 0.5s;
 }
 .social-icons a:hover {
-  color: rgb(224, 4, 4);
+  color: #e00404;
 }
 .social-icons a {
   margin-left: 16px;
@@ -352,7 +352,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .portfolio .btn-primary {
   display: inline-block;
-  background-color: rgb(224, 4, 4);
+  background-color: #e00404;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 500;
@@ -367,7 +367,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fff;
-  border-color: rgb(224, 4, 4);
+  border-color: #e00404;
 }
 .portfolio .card {
   border: 2px solid #fff;
@@ -425,12 +425,44 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
       -ms-flex-align: center;
           align-items: center;
   padding: 0 5px 0 5px;
+  font-size: 14px;
+}
+.portfolio .solution div {
+  width: 50%;
+}
+.portfolio .solution h4 {
+  color: #06e6f6;
+  font-size: 16px;
+  font-weight: 400;
 }
 .portfolio .solution ul {
-  width: 50%;
+  padding-left: 0.5rem;
 }
 .portfolio .solution ul li {
   height: 15vh;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.portfolio .solution ul li:before {
+  content: url("../images/gemini-line.svg");
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.portfolio .solution ul.filled li:before {
+  content: url("../images/gemini-fill.svg");
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 /*Секция Акции(Offer)*/
@@ -474,7 +506,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 }
 .offer-btn {
   display: inline-block;
-  background-color: rgb(224, 4, 4);
+  background-color: #e00404;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 500;
@@ -492,7 +524,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fff;
-  border-color: rgb(224, 4, 4);
+  border-color: #e00404;
 }
 .offer-section {
   padding: 0 3vw 8% 3vw;
@@ -747,7 +779,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   min-height: 50px;
   background: #fff;
   border-radius: 8px;
-  border: 2px solid rgb(224, 4, 4);
+  border: 2px solid #e00404;
   margin: 10px;
   text-align: center;
   font-size: 1.2em;
@@ -857,7 +889,7 @@ table.add-services tbody th {
   transition: all 0.5s;
 }
 .contacts-icons a:hover {
-  color: rgb(224, 4, 4);
+  color: #e00404;
 }
 .contacts-icons-item {
   padding: 7px 23px 7px 23px;
@@ -868,7 +900,7 @@ table.add-services tbody th {
   background: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-color: rgb(224, 4, 4);
+  border-color: #e00404;
 }
 .contacts-icons-item:hover .ri-telegram-2-line:before, .contacts-icons-item:hover .ri-vk-fill:before {
   color: #fff;
@@ -919,7 +951,7 @@ table.add-services tbody th {
 }
 .footer-item:nth-child(2) i {
   font-size: 32px;
-  color: rgb(6, 230, 246);
+  color: #06e6f6;
   margin-left: 7px;
 }
 
