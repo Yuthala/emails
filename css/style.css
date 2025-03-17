@@ -388,6 +388,9 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 .portfolio .card-img-top {
   border-radius: 16px 16px 0 0;
 }
+.portfolio .card-title {
+  margin-bottom: 2vh;
+}
 .portfolio .card-footer {
   padding-top: 3vh;
   padding-bottom: 4vh;
@@ -407,6 +410,9 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   background: -webkit-gradient(linear, left bottom, left top, from(rgb(37, 37, 41)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(0deg, rgb(37, 37, 41) 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
+}
+.portfolio .card-footer {
+  border-top: 1px solid rgba(211, 211, 211, 0.5);
 }
 .portfolio .card-footer a {
   color: #fff;
@@ -436,7 +442,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   font-size: 14px;
 }
 .portfolio .solution ul li {
-  height: 10vh;
+  height: 13vh;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -958,6 +964,22 @@ table.add-services tbody th {
   }
   .nav-link {
     font-size: 18px;
+  }
+  .portfolio .solution {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio .solution div {
+    width: 100%;
+  }
+  .portfolio .solution ul li {
+    height: auto;
+    margin-bottom: 4vh;
+  }
+  .portfolio .solution h4 {
+    margin-bottom: 16px;
   }
   .offer-item:nth-child(2) {
     -webkit-box-ordinal-group: 4;

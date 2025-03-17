@@ -334,6 +334,9 @@ text-align: center;
         &-img-top {
             border-radius: 16px 16px 0 0 ;
         }
+        &-title {
+            margin-bottom: 2vh;
+        }
         &-footer {
             padding-top: 3vh;
             padding-bottom: 4vh;
@@ -354,10 +357,13 @@ text-align: center;
                 z-index: 2;
             }
         }
-        &-footer a {
-            color: $base-light;
-            font-size: 12px;
-            text-decoration: underline;
+        &-footer {
+            border-top: 1px solid rgba(211, 211, 211, .5);
+            a {
+                color: $base-light;
+                font-size: 12px;
+                text-decoration: underline;
+            }
         }
     }
     .solution {
@@ -377,7 +383,7 @@ text-align: center;
             padding-left: .5rem;
             font-size: 14px;
             li {
-                height: 10vh;
+                height: 13vh;
                 list-style: none;
                 display: flex;
                 align-items: center;
@@ -766,6 +772,19 @@ padding-top: 60px;
 	.nav-link {
 		font-size: 18px;
 	}
+    .portfolio .solution {
+        flex-direction: column;
+        div {
+            width: 100%;
+        }
+        ul li {
+            height: auto;
+            margin-bottom: 4vh;
+        }
+        h4 {
+            margin-bottom: 16px;
+        }
+    }
     .offer {
         &-item {
             &:nth-child(2) {
