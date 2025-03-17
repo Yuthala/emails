@@ -329,7 +329,7 @@ text-align: center;
         box-shadow: 0 0 12px $base-light;
         padding: 0;
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
         &-img-top {
             border-radius: 16px 16px 0 0 ;
@@ -339,7 +339,6 @@ text-align: center;
             padding-bottom: 4vh;
         }
         &-body p {
-            min-height: 12vh;
             max-height: 20vh;
             overflow: hidden;
             position: relative;
@@ -355,9 +354,6 @@ text-align: center;
                 z-index: 2;
             }
         }
-        &-text {
-            font-size: 14px;
-        }
         &-footer a {
             color: $base-light;
             font-size: 12px;
@@ -368,7 +364,7 @@ text-align: center;
         display: flex;
         align-items: center;
         padding: 0 5px 0 5px;
-        font-size: 14px;
+        margin-top: 5vh;
         div {
             width: 50%;
         }
@@ -379,8 +375,9 @@ text-align: center;
         }
         ul {
             padding-left: .5rem;
+            font-size: 14px;
             li {
-                height: 15vh;
+                height: 10vh;
                 list-style: none;
                 display: flex;
                 align-items: center;
