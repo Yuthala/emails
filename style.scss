@@ -356,6 +356,12 @@ text-align: center;
                 background: linear-gradient(0deg,rgb(37, 37, 41)0%,rgba(255, 255, 255, 0)100%);
                 z-index: 2;
             }
+            &.p-collapsed {
+                max-height: 100vh;
+                &:after {
+                    height: 0;
+                }
+            }
         }
         &-footer {
             border-top: 1px solid rgba(211, 211, 211, .5);

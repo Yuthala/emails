@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-	//функция обратного отсчета времени
+//функция обратного отсчета времени
 	const updateTimer = setInterval(function() {
 	future = Date.parse("Mar 31, 2025 23:59:59");
 	now = new Date();
@@ -119,7 +119,31 @@ window.addEventListener('DOMContentLoaded', function() {
 		'<div>' + s + '<span>'+ secsText +'</span></div>'
 	}, 1000)
 
+//collapse карточки кейса
+function cardCollapse() {
+	let linkCollapse = document.getElementsByClassName('icon-link'),
+	paragraph = document.getElementsByClassName('card-text');
+	let isOpen = false;
 
+	if (typeof linkCollapse === 'object' && linkCollapse!== null && 
+		typeof paragraph === 'object' && paragraph!== null) {
+		
+	for(let i = 0; i < linkCollapse.length; i++) {
+		linkCollapse[i].addEventListener('click', function() {
+			if(!isOpen) {
+				linkCollapse[i].innerHTML = 'Свернуть' + '<svg class="bi" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>';
+				paragraph[i].classList.add('p-collapsed');
+				isOpen = true;
+			} else if (isOpen) {
+				linkCollapse[i].innerHTML = 'Подробнее' + '<svg class="bi" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>';
+				paragraph[i].classList.remove('p-collapsed');
+				isOpen = false;
+			}
+		})
+	}
+		} 
+	}
+cardCollapse();
 
 	// Функция определения Y-скролла
 	// window.addEventListener('scroll', function () {
