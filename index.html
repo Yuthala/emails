@@ -31,16 +31,16 @@
 										<a class="nav-link active" aria-current="page" href="#">Главная</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#">Портфолио</a>
+										<a class="nav-link" href="#portfolio">Портфолио</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#">Акции</a>
+										<a class="nav-link" href="#offer">Акции</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#">Прайс-лист</a>
+										<a class="nav-link" href="#price">Прайс-лист</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#">Контакты</a>
+										<a class="nav-link" href="#contacts">Контакты</a>
 									</li>
 								</ul>
 							</div>
@@ -57,13 +57,13 @@
 									<ul>
 										<li>адаптивное</li>
 										<li>поддержка темной темы</li>
-										<li>поддержка >90% <br/>почтовых клиентов</li>
+										<li>поддержка >90% <br/>популярных почтовых клиентов</li>
 										<li>тестирование</li>
 										<li>от 1 дня</li>
 									</uг>
 	
 									<div class="social">
-										<a href="#" class="social-btn">Спецпредложение</a>
+										<a href="#offer" class="social-btn">Спецпредложение</a>
 										<div class="social-icons">
 											<a href="https://t.me/SugarBay" target="_blank" rel="noopener"><i class="ri-telegram-fill"></i></a>
 											<a href="https://vk.com/club229078874" target="_blank" rel="noopener"><i class="ri-vk-fill"></i></a>
@@ -189,9 +189,9 @@
 								<!-- вставлять картинки высотой 900 px (1200х900) -->
 								<img src="images/portfolio/chocolatey.png" class="card-img-top" alt="chocolatey">
 								<div class="card-body">
-								<h5 class="card-title">Приветственные письма для магазина шин</h5>
-								<p class="card-text">Серия из 9 писем, от подтверждения оформления заказа до напоминания о брошенной корзине. Клиент - крупная компания, специализирующаяся на продаже шин. Компания также имеет сеть шиномонтажей и сервисов сезонного хранения шин.<br />
-								Макет был великолепен с художественной точки зрения, и тем сложнее было перенести его в верстку. Множество иконок, значки, кнопки, двойные фоновые изображения, нестандартные схемы адаптации карточек товара, динамический контент. Неделя напряженной работы - и вот драфты писем готовы. После этого немного поменяли отдельные элементы дизайна, пересогласовывали макет, делали правки... В итоге все задумки дизайнера были воплощены в жизнь, и клиент получил желаемый результат!</p>
+								<h5 class="card-title">Анонс новинок магазина крафтового шоколада</h5>
+								<p class="card-text">Письмо с анонсом новинок для магазина крафтового шоколада Chocolatey.<br />
+								Макет очень простой, состоит из одно- и двухколоночных секций. Заказчик предоставил также темную тему макета, и необходимо было точное соответствие во всех почтовых клиентах.</p>
 								</div>
 								<div class="collapse" id="collapseItem3">
 									<hr/>
@@ -199,8 +199,8 @@
 										<div>
 											<h4>Задача</h4>
 											<ul>
-												<li>изначально макет не подходил по техническим требованиям для HTML-писем</li>
-												<li>динамический контент письма</li>
+												<li>стандартный макет</li>
+												<li>дополнительный макет в темной теме</li>
 												<li>адаптивное</li>
 											</ul>
 										</div>
@@ -208,9 +208,9 @@
 										<div>
 											<h4>Решение</h4>
 											<ul class="filled">
-												<li>варианты изменений к макету с сохранением дизайнерского концепта</li>
-												<li>верстка текстовыми блоками, учет непостоянной ширины контента </li>
-												<li>адаптивное письмо без использования @media-запросов</li>
+												<li>готовое письмо в точности соотвествует макету</li>
+												<li>реализация темной темы с учетом инверсии цветов</li>
+												<li>разработка макета для мобильной версии на основании имеющегося макета для desktop версии</li>
 											</ul>
 										</div>
 									</div>
@@ -229,7 +229,7 @@
 				</div>
 			</section>
 
-			<section class="offer-section">
+			<section class="offer-section" id="offer">
 				<div class="container">
 					<h3>Акции и скидки</h3>
 					<div class="offer row">
@@ -251,7 +251,7 @@
 				</div>
 			</section>
 
-			<section class="price">
+			<section class="price" id="price">
 				<div class="container">
 					<h3>Прайс лист</h3>
 					<div class="table-responsive-md">
@@ -363,7 +363,7 @@
 				</div>
 			</section>
 
-			<section class="contacts">
+			<section class="contacts" id="contacts">
 				<div class="container-fluid text-center">
 					<div class="bottom-wrapper">
 						<div class="blur">
