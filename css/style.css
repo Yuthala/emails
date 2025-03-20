@@ -130,7 +130,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
           transform: scale(0);
   -webkit-animation: zoom-in 1s ease forwards;
           animation: zoom-in 1s ease forwards;
-  padding: 0 3vw 8% 3vw;
+  padding: 0 3vw 4% 3vw;
   padding-top: 6%;
 }
 
@@ -348,7 +348,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
 
 /*Секция Кейсы(Potrfolio)*/
 .portfolio {
-  padding: 0 3vw 8% 3vw;
+  padding: 0 3vw 4% 3vw;
 }
 .portfolio .btn-primary {
   display: inline-block;
@@ -536,7 +536,7 @@ tr > td:nth-child(2), tr > td:nth-child(3), tr > td:nth-child(4), tr > th:nth-ch
   border-color: #e00404;
 }
 .offer-section {
-  padding: 0 3vw 8% 3vw;
+  padding: 0 3vw 4% 3vw;
 }
 .offer-section .container {
   display: -webkit-box;
@@ -916,7 +916,7 @@ table.add-services tbody th {
 }
 .contacts h3 {
   margin-top: 0;
-  padding-top: 8vh;
+  padding-top: 16vh;
 }
 
 .contacts .container-fluid {
