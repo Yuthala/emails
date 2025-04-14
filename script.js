@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 //функция обратного отсчета времени
 	const updateTimer = setInterval(function() {
-	future = Date.parse("Mar 31, 2025 23:59:59");
+	future = Date.parse("May 31, 2025 23:59:59");
 	now = new Date();
 	diff = future - now;
 
@@ -100,16 +100,6 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 	
-	// function helper(textField, i) {
-	// 	if (timeTransformed[i] >= 5 && timeTransformed[i] <= 14 || timeTransformed[i] == 0) {
-	// 		textField = forms[5][i]
-	// 	} else if (timeTransformed[i] == 1) {
-	// 		textField = forms[timeTransformed[i]][i]
-	// 	} else {
-	// 		textField = forms[timeTransformed[i]][i]
-	// 	}
-	// }
-
 	//отрисовываем в div id="timer"
 	document.getElementById("timer")
 	  .innerHTML =
@@ -119,7 +109,10 @@ window.addEventListener('DOMContentLoaded', function() {
 		'<div>' + s + '<span>'+ secsText +'</span></div>'
 	}, 1000)
 
-//изменение текста в карточке кейса
+
+
+
+//toggle Подробнее/Свернуть в карточке кейса
 function textCollapse() {
 	const linkCollapse = document.querySelectorAll(".icon-link");
 	const paragraph = document.querySelectorAll('.card-text');
@@ -142,8 +135,6 @@ function textCollapse() {
 		}
 }
 textCollapse();
-
-
 
 
 	// Функция определения Y-скролла
